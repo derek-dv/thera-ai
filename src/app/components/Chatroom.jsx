@@ -7,7 +7,7 @@ const ChatRoom = () => {
   const [messages, setMessages] = useState([
     {
       content:
-        "Hello, I am i dey4u, your virtual therapist. Tell me what is bothering you 😁",
+        "Hello, I am Thera AI, your virtual therapist. Tell me what is bothering you 😁",
       role: "assistant",
     },
   ]);
@@ -24,7 +24,7 @@ const ChatRoom = () => {
         {
           role: "user",
           content:
-            "You are idey4u, my assistant and I want you to assume the role of my therapist as I'm depressed and have mental health issues. I understand the advice you give me shouldn't be taken as medical advice. I need just short messages/advice to motivate me. Engage me in a conversation.",
+            "You are Thera AI, my assistant and I want you to assume the role of my therapist as I'm depressed and have mental health issues. I understand the advice you give me shouldn't be taken as medical advice. I need just short messages/advice to motivate me. Engage me in a conversation.",
         },
         ...messages,
         { content: newMessage, role: "user" },
