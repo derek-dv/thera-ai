@@ -1,6 +1,7 @@
 "use client";
 import OpenAI from "openai";
 import React, { useState } from "react";
+import logo from "../logo.png";
 
 const ChatRoom = () => {
   const openAiKey = process.env.NEXT_PUBLIC_OPENAI_KEY || "";
@@ -67,19 +68,27 @@ const ChatRoom = () => {
 
   return (
     <div className="flex flex-col h-full bg-gray-200">
-      <div className="flex-1 p-4 overflow-y-auto">
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`my-2 p-2 max-w-xs ${
-              message.role === "user"
-                ? "ml-auto bg-blue-500 text-white"
-                : "mr-auto bg-gray-300"
-            } rounded-lg`}
-          >
-            {message.content}
-          </div>
-        ))}
+      <div className="flex-1 p-4 overflow-y-auto relative">
+        <div className="inset-0">
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={`my-2 p-2 max-w-xs ${
+                message.role === "user"
+                  ? "ml-auto bg-blue-500 text-white"
+                  : "mr-auto bg-gray-300"
+              } rounded-lg`}
+            >
+              {message.content}
+            </div>
+          ))}
+        </div>
+        <img
+          className="absolute inset-0 w-full h-full"
+          src="logo.png"
+          alt="Overlay"
+          style={{ opacity: 0.1 }}
+        />
       </div>
       <div className="p-4 flex-0.5">
         <div className="flex items-center">

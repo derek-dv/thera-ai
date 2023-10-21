@@ -5,9 +5,9 @@ import Landing from "./components/Landing";
 
 export default function Home() {
   return (
-    <div className="h-screen text-black">
+    <div className="h-screen text-black ">
       {/* <Landing /> */}
-      <div className="flex h-full flex-col justify-between">
+      <div className="flex h-full flex-col justify-between ">
         <ChatRoom />
       </div>
     </div>
