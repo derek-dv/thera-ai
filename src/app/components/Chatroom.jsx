@@ -3,7 +3,7 @@ import OpenAI from "openai";
 import React, { useState } from "react";
 
 const ChatRoom = () => {
-  const openAiKey = "sk-...";
+  const openAiKey = process.env.OPENAI_KEY;
   const [messages, setMessages] = useState([
     {
       content:
